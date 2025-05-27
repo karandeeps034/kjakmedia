@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We’re Upgrading | K Jak Media</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+    }
+    #vanta-bg {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(4px);
+      border-radius: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .animated-text {
+      font-size: 3.5rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #82e0ff, #a68edb, #ffc6f0);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s linear infinite;
+      margin-bottom: 1.2rem;
+    }
+    @keyframes shimmer {
+      0% { background-position: -100% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .content p {
+      font-size: 1.4rem;
+      color: #d8d8d8;
+      margin-bottom: 2rem;
+      animation: floatText 6s ease-in-out infinite;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    }
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .contact {
+      font-size: 1.1rem;
+      color: #bbb;
+      animation: fadeInUp 2s ease forwards;
+    }
+    .contact span {
+      display: block;
+      font-size: 1.2rem;
+      margin-top: 6px;
+      color: #e0e0e0;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="vanta-bg"></div>
+  <div class="content">
+    <h1 class="animated-text">We’re Evolving...</h1>
+    <p>✨ A better digital experience is being crafted just for you.<br>
+       Sit tight while we bring new energy to your screen.
+    </p>
+    <div class="contact">
+      <p><strong>Contact us</strong></p>
+      <p>
+        📞 <span>9667166994</span>
+        📧 <span>Expand@kjakmedia.com</span>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x82e0ff,
+      backgroundColor: 0x000000,
+      points: 14.0,
+      maxDistance: 22.0,
+      spacing: 18.0
+    })
+  </script>
+</body>
+</html>
